@@ -1,25 +1,23 @@
-import countries from "../index";
+//import newArr from '../index';
+import newArr from '..';
 
-it("should get basic data on the country canada", async () => {
-  const data = await countries.getCountry('canada');
-  expect(data).toEqual({
-    capital: 'Ottawa',
-    region: 'Americas',
-    numericCode: '124'
-  });
+
+
+
+const numArr = [3, 4, 5, 6];
+const wordArr = ['cat', 'dog', 'rabbit', 'bird'];
+
+it('should make a new array containing dog', () => {
+    expect(newArr(3, wordArr)).toContain('dog');
+});
+it('make a new array containing 3', () => {
+    expect(newArr(3, wordArr)).toContain(3);
 });
 
-/** Add test for getRegionCountries function here */
-it("should get countries of NAFTA regional block", async () => {
-  const data = await countries.getRegionCountries('nafta');
-  expect(data).toEqual([
-    'Canada', 'Mexico', 'United States of America'
-  ]);
-});
 
-it("should get capitals of NAFTA countries", async () => {
-  const data = await countries.getRegionCapitals('nafta');
-  expect(data).toEqual([
-    'Ottawa', 'Mexico City', 'Washington, D.C.'
-  ]);
-});
+
+
+
+
+
+
